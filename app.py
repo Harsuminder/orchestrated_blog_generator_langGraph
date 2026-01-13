@@ -162,7 +162,7 @@ if run:
     with st.spinner("Generating blog (orchestrator → workers → synthesize)..."):
         result_state = workflow.invoke({"topic": topic})
         st.session_state["final_blog"] = result_state["final_blog"]
-        # (Optional) keep these for display/debug
+      
         st.session_state["title"] = result_state.get("title", "")
         st.session_state["tldr"] = result_state.get("tldr", "")
 
